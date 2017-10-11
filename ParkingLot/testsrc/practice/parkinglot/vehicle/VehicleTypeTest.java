@@ -1,7 +1,6 @@
-package practice.parkinglot;
+package practice.parkinglot.vehicle;
 
 import org.junit.jupiter.api.Test;
-import practice.parkinglot.vehicle.VehicleType;
 
 public class VehicleTypeTest {
   @Test
