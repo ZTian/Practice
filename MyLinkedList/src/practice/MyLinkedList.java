@@ -1,10 +1,12 @@
 package practice;
 
 public class MyLinkedList implements MyList {
-  ListNode head;
+  private ListNode head;
+  private int size;
 
   public MyLinkedList() {
     head = null;
+    size = 0;
   }
 
   @Override
@@ -13,6 +15,7 @@ public class MyLinkedList implements MyList {
       return false;
     } else if (head.value == value) {
       head = head.next;
+      size--;
       return true;
     }
     ListNode curr = head;
@@ -23,6 +26,7 @@ public class MyLinkedList implements MyList {
       return false;
     }
     curr.next = curr.next.next;
+    size--;
     return true;
   }
 
@@ -41,6 +45,7 @@ public class MyLinkedList implements MyList {
     ListNode node = new ListNode(value);
     if (head == null) {
       head = node;
+      size++;
       return true;
     }
     ListNode curr = head;
@@ -48,23 +53,18 @@ public class MyLinkedList implements MyList {
       curr = curr.next;
     }
     curr.next = node;
+    size++;
     return true;
   }
 
   @Override
   public int size() {
-    ListNode node = head;
-    int size = 0;
-    while (node != null) {
-      node = node.next;
-      size++;
-    }
     return size;
   }
 
   @Override
   public boolean isEmpty() {
-    return head == null;
+    return size == 0;
   }
 
   @Override
