@@ -3,6 +3,7 @@ package practice;
 public interface MyList {
   boolean isEmpty();
   int size();
-  ListNode add(int value);
+  boolean add(int value);
   ListNode get(int index);
+  boolean remove(int value);
 }
