@@ -11,9 +11,4 @@ public class SUV extends Vehicle {
   public int getSize() {
     return type.size();
   }
-
-  @Override
-  public String getVehicleNumber() {
-
-  }
 }
