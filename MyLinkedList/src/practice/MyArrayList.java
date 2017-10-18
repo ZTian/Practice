@@ -19,8 +19,7 @@ public class MyArrayList implements MyList {
     if (size == capacity) {
       return false;
     }
-    elements[size] = value;
-    size++;
+    elements[size++] = value;
     return true;
   }
 
